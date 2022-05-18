@@ -3,12 +3,18 @@
 #include <iostream>
 #include <cstdio>
 #include <fstream>
+#include <array>
 #include <vector>
 using namespace std;
 
 
 struct registro{
-  char date[11], currency[4];
+  std::array<char, 11> date; 
+  std::array<char, 3> currency;
+
+  //char currency[4];
+  //char date[11];
+
   float open, high, low, close, volume;
   
   void readCSVLine(string st);
@@ -16,7 +22,6 @@ struct registro{
 
 void registro::readCSVLine(string st){
   sscanf(st.c_str(),"%[^,],%f,%f,%f,%f,%f,%[^,]", date, &open, &high, &low, &close, &volume, currency);
-  //cout << "Open: " << open << endl;
 }
 
 vector<registro> readCSV(string stpath){

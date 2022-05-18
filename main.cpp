@@ -18,4 +18,9 @@ int main(){
 
     f->setStrategy(m);
     f->strategyExecute();
+
+    delete f;
+    delete a;
+    delete c;
+    delete m;
 }
