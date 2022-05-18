@@ -12,10 +12,11 @@ struct registro{
   std::array<char, 11> date; 
   std::array<char, 3> currency;
 
-  //char currency[4];
-  //char date[11];
-
-  float open, high, low, close, volume;
+  float open;
+  float high;
+  float low;
+  float close;
+  float volume;
   
   void readCSVLine(string st);
 }; 
@@ -38,30 +39,21 @@ vector<registro> readCSV(string stpath){
   return result;
 }
 
-struct CSV{
-  CSV(string path){
-    registros = readCSV(path);
-  }
-  vector<registro> registros;
-};
-
 
 class Strategy {
 	protected:
 		string csvName;
   
 	public:
-    Strategy(){}
+    Strategy() = default;
   	Strategy(string _csvName): csvName(_csvName) {};
   	virtual void execute(){}
-      //cout << "esta corriendo este execute";
-    //}
 };
 
 
 class Aperture: public Strategy {
   public:
-    Aperture(){}
+    Aperture() = default;
   	Aperture(string _csvName): Strategy(_csvName) {};
   	
   	void execute() override{
@@ -83,7 +75,7 @@ class Closing: public Strategy {
   public:
   	Closing(string _csvName): Strategy(_csvName) {};
   	
-  	void execute(){
+  	void execute() override{
       vector<registro> registros = readCSV(csvName);
       double suma = 0;
       
@@ -125,7 +117,6 @@ class Forecast{
     }
   
   	void strategyExecute() {
-      //cout << "test";
       strategy->execute();
     }
 };

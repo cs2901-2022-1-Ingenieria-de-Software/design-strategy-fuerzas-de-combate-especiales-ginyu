@@ -17,6 +17,7 @@
 "cwd":"C:\\Francisco\\OneDrive - UNIVERSIDAD DE INGENIERIA Y TECNOLOGIA\\UTEC\\UTEC CS\\2022-I\\Ingenieria-de-software-I\\Asignaciones\\design-strategy-fuerzas-de-combate-especiales-ginyu\\",
 "env": [
 "=C:=C:\\Francisco\\OneDrive - UNIVERSIDAD DE INGENIERIA Y TECNOLOGIA\\UTEC\\UTEC CS\\2022-I\\Ingenieria-de-software-I\\Asignaciones\\design-strategy-fuerzas-de-combate-especiales-ginyu",
+"=ExitCode=00000000",
 "ALLUSERSPROFILE=C:\\ProgramData",
 "APPDATA=C:\\Users\\User\\AppData\\Roaming",
 "CHROME_CRASHPAD_PIPE_NAME=\\\\.\\pipe\\crashpad_9084_EUQDBHNJGGNZQMHM",
@@ -27,6 +28,7 @@
 "ComSpec=C:\\WINDOWS\\system32\\cmd.exe",
 "CYGWIN=wincmdln",
 "DriverData=C:\\Windows\\System32\\Drivers\\DriverData",
+"ERROR_CODE=0",
 "FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer",
 "FPS_BROWSER_USER_PROFILE_STRING=Default",
 "HOMEDRIVE=C:",
